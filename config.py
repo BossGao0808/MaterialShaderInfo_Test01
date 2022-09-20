@@ -1,7 +1,7 @@
 
 # 数据库的配置信息
 
-HOSTNAME = '127.0.0.1'
+HOSTNAME = '1.15.179.226'
 PORT     = '3306'
 DATABASE = 'astro_shader'  # 对应数据库的名称
 USERNAME = 'Astro_Shader'
