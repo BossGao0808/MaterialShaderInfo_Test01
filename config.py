@@ -3,9 +3,9 @@
 
 HOSTNAME = '127.0.0.1'
 PORT     = '3306'
-DATABASE = 'Astro_data'  # 对应数据库的名称
-USERNAME = 'root'
-PASSWORD = 'Bingo1314.'
+DATABASE = 'astro_shader'  # 对应数据库的名称
+USERNAME = 'Astro_Shader'
+PASSWORD = 'CcDY6AMEDK8W5Lft'
 DB_URI   = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME,PASSWORD,HOSTNAME,PORT,DATABASE)
 
 SQLALCHEMY_DATABASE_URI=DB_URI
