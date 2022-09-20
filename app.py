@@ -4,7 +4,7 @@ from exts import db,mail
 from blueprints import user_bp,shaderinfo_bp
 from flask_migrate import Migrate
 
-# testtest
+# testtest2
 
 app = Flask(__name__)
 app.config.from_object(config)
