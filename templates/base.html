@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1">
+    <title>
+        {% block title %}
+            {# 这里是title的预留block #}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/bootstrap.5.1.min.css') }}">
+    <link rel="stylesheet" href="/static/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/init.css') }}">
+    {% block head %}
+        {# 这里是head的预留block #}
+    {% endblock %}
+
+</head>
+<body>
+{# 这里是导航条 #}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MaterialShaderInfo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Shader热力图</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">shader性能分析</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        项目选择
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </li>
+
+            </ul>
+
+            <ri class="nav-item">
+                <a class="nav-link" href="{{ url_for('shaderinfo.testcode') }}">testcode</a>
+            </ri>
+
+            <ri class="nav-item">
+                <a class="nav-link" href="{{ url_for('user.login') }}">login</a>
+            </ri>
+
+            <ri class="nav-item">
+                <a class="nav-link" href="{{ url_for('user.register') }}">register</a>
+            </ri>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    {% block body %}
+        {# 这里是body的导航条 #}
+    {% endblock %}
+</div>
+</body>
+</html>
+
+
+

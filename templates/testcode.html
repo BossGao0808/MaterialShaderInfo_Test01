@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+MaterialShaderInfo
+{% endblock %}
+
+{% block body %}
+
+    {#这里是一个卡片包含滑条的案例#}
+    <div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <div>
+                    {#这里是card-body#}
+                    <label for="customRange1" class="form-label">Example range</label>
+                    <input type="range" class="form-range" id="customRange1">
+                </div>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
+      {#这里是读取文件的案例#}
+    <div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+        </div>
+        <div class="mb-3">
+            <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+            <input class="form-control" type="file" id="formFileDisabled" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Small file input example</label>
+            <input class="form-control form-control-sm" id="formFileSm" type="file">
+        </div>
+        <div>
+            <label for="formFileLg" class="form-label">Large file input example</label>
+            <input class="form-control form-control-lg" id="formFileLg" type="file">
+        </div>
+    </div>
+
+
+{% endblock %}
+
