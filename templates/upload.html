@@ -1,0 +1,27 @@
+{% extends 'basecode.html' %}
+{% block title %}
+    MaterialShaderInfo
+{% endblock %}
+
+{% block head %}
+    <script src="{{ url_for('static',filename='jquery/jquery.3.6.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/upload.js') }}"></script>
+{% endblock %}
+
+
+{% block body %}
+
+    <div>
+        <h1>上传shader数据</h1>
+        <div>
+            <form method="POST" enctype="multipart/form-data" action={{ url_for('upload.upload') }}>
+                <input type="file" name="filename" accept=".csv">
+                <input type="submit">
+            </form>
+        </div>
+
+    </div>
+
+
+{% endblock %}
+

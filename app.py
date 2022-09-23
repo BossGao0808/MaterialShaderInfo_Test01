@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 import config
 from exts import db,mail
-from blueprints import user_bp,shaderinfo_bp
+from blueprints import user_bp,shaderinfo_bp,upload_bp
 from flask_migrate import Migrate
 
 # testtest2
@@ -17,7 +17,7 @@ migrate = Migrate(app,db)
 
 app.register_blueprint(user_bp)
 app.register_blueprint(shaderinfo_bp)
-
+app.register_blueprint(upload_bp)
 
 
 if __name__ == '__main__':

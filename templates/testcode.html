@@ -3,6 +3,15 @@
 MaterialShaderInfo
 {% endblock %}
 
+{% block head %}
+    <script src="{{ url_for('static',filename='jquery/jquery.3.6.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/upload.js') }}"></script>
+    <script src="{{ url_for('static',filename='plugins/Chart/Chart.min.js') }}"></script>
+{% endblock %}
+
+
+
+
 {% block body %}
 
     {#这里是一个卡片包含滑条的案例#}
@@ -43,6 +52,17 @@ MaterialShaderInfo
             <input class="form-control form-control-lg" id="formFileLg" type="file">
         </div>
     </div>
+
+
+
+
+    <div>
+        <input type="float" name="number1" value="0.5" id="number1">
+        <input type="float" name="number2">
+        <input type="float" name="number3">
+        <canvas id="chart6"></canvas>
+    </div>
+
 
 
 {% endblock %}
