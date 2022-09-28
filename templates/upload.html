@@ -11,16 +11,60 @@
 
 {% block body %}
 
-    <div>
-        <h1>上传shader数据</h1>
-        <div>
-            <form method="POST" enctype="multipart/form-data" action={{ url_for('upload.upload') }}>
-                <input type="file" name="filename" accept=".csv">
-                <input type="submit">
-            </form>
-        </div>
+    <div class="row">
+        <div class="col-xl-11 mx-auto">
+            <h6 class="mb-0 text-uppercase">上 传 数 据</h6>
+            <hr/>
+            <div class="card">
+                <div class="card-body">
+                    <div class="p-4 border rounded">
+                        <form method="POST" enctype="multipart/form-data" action={{ url_for('upload.upload') }}>
 
+                            <div class="mb-3">
+                                <label class="form-label">Project:</label>
+                                <select class="form-select" required aria-label="select example" name="ProjectName">
+                                    <option value="">project select menu</option>
+                                    <option value="Project_Name_1">Project Name:1</option>
+                                    <option value="Project_Name_2">Project Name:2</option>
+                                    <option value="Project_Name_3">Project Name:3</option>
+                                </select>
+                                <div class="invalid-feedback">Example invalid select feedback</div>
+                            </div>
+
+                            {#输入提交时间#}
+                            <div class="mb-3">
+                                <label class="form-label">Date time:</label>
+                                <input type="datetime-local" class="form-control" name="time"  required>
+                            </div>
+                            {#选择提交文件#}
+                            <div class="mb-3">
+                                <label class="form-label">Input File:</label>
+                                <input type="file" class="form-control" name="filename" accept=".csv" required>
+                            </div>
+
+
+
+                            <div class="col-12">
+                                <label class="form-label">Describe</label>
+                                <textarea class="form-control" rows="4" cols="4" name="Describe"></textarea>
+                            </div>
+                            <div>
+
+                            </div>
+                            {# 上传按钮 #}
+                            <div class="col-12">
+                                <div class="d-grid mt-4">
+                                    <button type="submit" class="btn btn-primary radius-30">Up Load</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!--end row-->
+
 
 
 {% endblock %}

@@ -1,4 +1,3 @@
-
 # 数据库的配置信息
 
 HOSTNAME = '1.15.179.226'
@@ -24,6 +23,8 @@ MAIL_DEBUG=True
 MAIL_USERNAME='1076993716@qq.com'
 MAIL_PASSWORD='dylpgyszywizibaa'
 MAIL_DEFAULT_SENDER= '1076993716@qq.com'
+
+
 
 
 
